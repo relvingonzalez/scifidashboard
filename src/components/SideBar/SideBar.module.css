@@ -1,0 +1,31 @@
+.SideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    max-width: var(--sidebar-closed-width);
+    width: var(--sidebar-closed-width);
+    padding: 15px;
+    transition: all 0.5s ease;
+    background-color: var(--black);
+    border-right: 1px solid gray;
+}
+
+.SideBar ul {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-left: 0;
+}
+
+.open {
+    width: var(--sidebar-open-width);
+    max-width: var(--sidebar-open-width);
+}
+
+.open ul {
+    align-items: flex-start;
+}

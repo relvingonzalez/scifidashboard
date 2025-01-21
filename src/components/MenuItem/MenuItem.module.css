@@ -1,0 +1,23 @@
+.MenuItem {
+    display: flex;
+    align-items: center;;
+    background: none;
+    outline: none;
+    border-radius: 5px;
+    color: gray;
+    cursor:pointer;
+    padding: 8px;
+    font-size: 14px;
+    transition: all ease 0.2s;
+    overflow: hidden;
+}
+
+.MenuItem:hover {
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+.active {
+    color: var(--black);
+    background-color: var(--yellow);
+}

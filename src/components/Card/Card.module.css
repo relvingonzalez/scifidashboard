@@ -1,0 +1,23 @@
+.Card {
+    padding: 10px;
+    --aug-bg: var(--black);
+    --aug-tr: 25px;
+    --aug-bl: 57px;
+    --aug-br: 25px;
+    --aug-br-inset2: 40%;
+    --aug-border-all: 10px;
+    --aug-border-bg: var(--purple);
+    --aug-inlay-all: 10px;
+    --aug-inlay-bg: var(--black);
+}
+
+.Card h2 {
+    text-align: left;
+    color: var(--yellow);
+}
+
+.Card h3 {
+    text-align: left;
+    color: gray;
+}
+

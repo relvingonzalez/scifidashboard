@@ -1,0 +1,14 @@
+.Header {
+    background-color: var(--black);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    padding: 10px 40px ;
+    border-bottom: 1px solid gray;
+}
+
+.Header nav ul {
+    display: flex;
+}
