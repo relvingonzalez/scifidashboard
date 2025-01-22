@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src", // Adjust to your project structure
+        "baseUrl": "./src",
         "checkJs": false,
         "jsx": "react",
         "paths": {
@@ -17,5 +17,8 @@
     "exclude": [
         "node_modules",
         "dist"
-    ]
+    ],
+    "rules": {
+        "react/prop-types": "off"
+    }
 }

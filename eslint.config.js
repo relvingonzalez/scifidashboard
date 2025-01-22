@@ -8,8 +8,7 @@ export default [
             },
         },
         rules: {
-            'react/prop-types': ['error', { ignore: ['children'] }]
-            // Your rules here
+            'react/prop-types': 'off'
         }
     }
 ];
