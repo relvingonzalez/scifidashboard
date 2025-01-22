@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Dashboard.module.css';
 import Card from '../Card/Card';
 import { PieChart } from '../PieChart/PieChart';
@@ -7,13 +7,7 @@ import { PolarAreaChart } from '../PolarAreaChart/PolarAreaChart';
 import GreetingCard from '../GreetingCard/GreetingCard';
 import { BarChart } from '../BarChart/BarChart';
 import { LineChart } from '../LineChart/LineChart';
-import Header from '../Header/Header';
-
-const TabButton = ({ children, isActive, onClick }) => (
-  <li tabIndex="0" role="menuitem" className={`${styles.tabButton} ${isActive && styles.activeTab}`} data-testid="MenuItem" onClick={onClick}>
-    {children}
-  </li>
-);
+import Tabs from '../Tabs/Tabs';
 
 const Reports = () => (
   <>
@@ -47,22 +41,14 @@ const Guide = () => {
   )
 }
 
-const Dashboard = ({ children, sideBarOpen }) => {
-  const [tab, setTab] = useState('reports');
+const tabData = [
+  { tabName: 'reports', tabTitle: 'Reports', tabContentComponent: Reports },
+  { tabName: 'guide', tabTitle: 'Guide', tabContentComponent: Guide },
+];
 
-  return (
-    <div className={styles.Dashboard} data-testid="Dashboard">
-      <Header>
-        <TabButton isActive={tab === 'reports'} onClick={() => setTab('reports')}>Reports</TabButton>
-        <TabButton isActive={tab === 'guide'} onClick={() => setTab('guide')}>Guide</TabButton>
-      </Header>
-      <div className={styles.tabContent}>
-        {tab === 'reports' && <Reports />}
-        {tab === 'guide' && <Guide />}
-      </div>
-    </div>
-  );
-};
+const Dashboard = () => (
+  <Tabs data={tabData} />
+);
 
 Dashboard.propTypes = {};
 

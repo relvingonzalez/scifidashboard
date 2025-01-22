@@ -38,6 +38,8 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^9.18.0",
+    "eslint-plugin-react": "^7.37.4",
     "web-vitals": "^4.2.4"
   }
 }

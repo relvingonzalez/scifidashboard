@@ -1,0 +1,6 @@
+.Bounties {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    padding: 20px;
+}

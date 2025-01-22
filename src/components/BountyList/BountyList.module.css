@@ -1,0 +1,10 @@
+.BountyList {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.BountyList .bountyCard {
+    flex-basis: 45%;
+}

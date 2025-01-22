@@ -1,0 +1,45 @@
+.BountyCard {
+    display: flex;
+    flex: 1;
+}
+
+.Interior {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.Information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.InformationHeader {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.bounty {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.bounty p {
+    margin-left: 0;
+    text-align: left;
+}
+
+.bounty span {
+    color: var(--yellow)
+}
+
+.bounty .description {
+    text-align: left;
+}

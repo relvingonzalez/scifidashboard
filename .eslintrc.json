@@ -1,0 +1,16 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "react/prop-types": [
+            "error",
+            {
+                "ignore": [
+                    "children"
+                ]
+            }
+        ]
+    }
+}

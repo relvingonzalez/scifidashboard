@@ -41,6 +41,7 @@ nav ul {
   margin-left: var(--sidebar-closed-width);
   padding-left: 30px;
   background-color: var(--black);
+  min-height: 100vh;
 }
 
 .App-main.sidebar-open {
