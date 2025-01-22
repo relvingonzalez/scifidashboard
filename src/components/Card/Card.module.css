@@ -1,23 +1,28 @@
 .Card {
-    padding: 10px;
-    --aug-bg: var(--black);
-    --aug-tr: 25px;
-    --aug-bl: 57px;
-    --aug-br: 25px;
-    --aug-br-inset2: 40%;
-    --aug-border-all: 10px;
-    --aug-border-bg: var(--purple);
-    --aug-inlay-all: 10px;
-    --aug-inlay-bg: var(--black);
+    filter: drop-shadow(0 0 6px var(--purple))  drop-shadow(0 0 1px var(--purple)) brightness(1.5);
+    width: 100%;
+}
+
+.CardInner {
+    background-color: var(--black);
+    padding: 40px 30px;
+    --aug-border-bg: linear-gradient(to bottom right,  var(--yellow), var(--purple));
+    --aug-tl: 40px;
+    --aug-tr: 30px;
+    --aug-br: 20px;
+    --aug-br-extend1: 25%;
+    --aug-br-extend2: 50%;
 }
 
 .Card h2 {
     text-align: left;
     color: var(--yellow);
+    margin-bottom: 0;
 }
 
 .Card h3 {
     text-align: left;
     color: gray;
+    margin-top: 5px;
 }
 

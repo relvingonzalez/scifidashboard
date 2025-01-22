@@ -1,7 +1,7 @@
 .SideBar {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     left: 0;
     top: 0;
@@ -12,20 +12,37 @@
     transition: all 0.5s ease;
     background-color: var(--black);
     border-right: 1px solid gray;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .SideBar ul {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     padding-left: 0;
 }
 
-.open {
+.SideBar>ul>li {
+    margin: 8px;
+}
+
+.SideBar.open {
+    align-items: flex-start;
     width: var(--sidebar-open-width);
     max-width: var(--sidebar-open-width);
 }
 
 .open ul {
     align-items: flex-start;
+}
+
+.brand {
+    margin-top: 3;
+}
+
+.Toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
 }

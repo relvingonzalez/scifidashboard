@@ -1,0 +1,103 @@
+.GreetingCard {
+    display: flex;
+    flex: 1;
+}
+
+.Interior {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.Information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.InformationHeader {
+    display: flex;
+    ;
+    text-align: left;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.typewriter>p {
+    text-align: left;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--purple);
+    }
+}
+
+.vitals {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: gray;
+}
+
+.vitals>label {
+    margin: 5px;
+}
+
+.vitals progress {
+    width: 90%;
+}
+
+.vitals .optimal {
+    accent-color: var(--blue);
+}
+
+.vitals .good {
+    accent-color: var(--yellow);
+}
+
+.vitals .poor {
+    accent-color:var(--red);
+}
+
+.credits {
+    color: gray;
+}
+
+.credits span {
+    color: var(--yellow)
+}

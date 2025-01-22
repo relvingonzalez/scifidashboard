@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './SideBar.module.css';
+import Button from '../Button/Button';
 
-const SideBar = ({ isOpen, children }) => (
+const SideBar = ({ isOpen, onToggleOpen, children }) => (
     <nav className={`${styles.SideBar} ${isOpen && styles.open}`} data-testid="SideBar">
-      <h1 className="brand">{isOpen && 'Oracle'}</h1>
+      <Button className={`font-lg ${isOpen && 'rotate'} ${styles.Toggle}`} onClick={() => onToggleOpen(!isOpen)}>+</Button>
+      <h1 className="brand">{isOpen ? 'HAL 9000' : 'H'}</h1>
       <ul>
         {children}
       </ul>

@@ -1,41 +1,30 @@
 import './App.css';
-import {useState} from 'react';
+import { useState } from 'react';
 import SideBar from './components/SideBar/SideBar';
-import Header from './components/Header/Header';
-import { Box, Rss, ShoppingBag, ShoppingCart } from 'lucide-react';
+import { Box, Rocket, ShoppingCart } from 'lucide-react';
 import MenuItem from './components/MenuItem/MenuItem';
-import Button from './components/Button/Button';
-import Card from './components/Card/Card';
+import { Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   const [sideBarOpen, setSideBarOpen] = useState(true);
+  const [active, setActive] = useState('home');
+  const navigate = useNavigate();
+  const handleNavigate = (name, route) => {
+    navigate(route);
+    setActive(name);
+  };
   return (
     <div className="App">
-      <SideBar isOpen={sideBarOpen}>
-        <MenuItem isCategory>Home</MenuItem>
-        <MenuItem><Box /> {sideBarOpen && <p className="menu-text">Modern</p>}</MenuItem>
-        <MenuItem><ShoppingBag /> {sideBarOpen && <p className="menu-text">E-commerce</p>}</MenuItem>
-        <MenuItem className="mt-20" isCategory>App</MenuItem>
-        <MenuItem><Box /> {sideBarOpen && <p className="menu-text">Contacts</p>}</MenuItem>
-        <MenuItem><Rss /> {sideBarOpen && <p className="menu-text">Blog </p>}</MenuItem>
-        <MenuItem><ShoppingCart /> {sideBarOpen && <p className="menu-text">E-commerce</p>}</MenuItem>
+      <SideBar isOpen={sideBarOpen} onToggleOpen={() => setSideBarOpen(!sideBarOpen)}>
+        <MenuItem isCategory>{sideBarOpen ? 'Headquarters' : 'HQ'}</MenuItem>
+        <MenuItem isActive={active === 'home'} onClick={() => handleNavigate('home', '/')}><Rocket /> {sideBarOpen && <p className="menu-text">Home</p>}</MenuItem>
+        <MenuItem className="mt-20" isCategory>{sideBarOpen ? 'International' : 'Intl'}</MenuItem>
+        <MenuItem isActive={active === 'contacts'} onClick={() => handleNavigate('contacts', '/contacts')}><Box /> {sideBarOpen && <p className="menu-text">Contacts</p>}</MenuItem>
+        <MenuItem isActive={active === 'shop'} onClick={() => handleNavigate('shop', '/shop')}><ShoppingCart /> {sideBarOpen && <p className="menu-text">Market</p>}</MenuItem>
       </SideBar>
       <main className={`App-main ${sideBarOpen && 'sidebar-open'}`}>
-        <Header>
-          <MenuItem>
-            <Button className={`font-lg ${sideBarOpen && 'rotate'}`} onClick={() => setSideBarOpen(!sideBarOpen)}>+</Button>
-          </MenuItem>
-          <MenuItem>Apps</MenuItem>
-          <MenuItem>Chat</MenuItem>
-          <MenuItem>Calendar</MenuItem>
-          <MenuItem>Email</MenuItem>
-        </Header>
-        <div className="dash">
-          <Card title="My Chart" subtitle="The best">
-            <p>content</p>
-          </Card>
-
-        </div>
+        <Outlet />
       </main>
     </div>
   );

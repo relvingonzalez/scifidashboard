@@ -1,11 +1,11 @@
 .MenuItem {
     display: flex;
-    align-items: center;;
+    align-items: center;
     background: none;
     outline: none;
     border-radius: 5px;
     color: gray;
-    cursor:pointer;
+    cursor: pointer;
     padding: 8px;
     font-size: 14px;
     transition: all ease 0.2s;
@@ -17,7 +17,7 @@
     background-color: var(--purple);
 }
 
-.active {
+.MenuItem.active {
     color: var(--black);
     background-color: var(--yellow);
 }

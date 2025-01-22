@@ -1,13 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 import './index.css';
+import React, { lazy, Suspense } from 'react';
+import ReactDOM from 'react-dom/client';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Use lazy to import components
+const Dashboard = lazy(() => import('./components/Dashboard/Dashboard'));
+const Contacts = lazy(() => import('./components/Contacts/Contacts'));
+const Shop = lazy(() => import('./components/Shop/Shop'));
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<div>Loading Home...</div>}>
+            <Dashboard />
+          </Suspense>
+        )
+      },
+      {
+        path: "contacts",
+        element: (
+          <Suspense fallback={<div>Loading Guide...</div>}>
+            <Contacts />
+          </Suspense>
+        )
+      },
+      {
+        path: "shop",
+        element: (
+          <Suspense fallback={<div>Loading About...</div>}>
+            <Shop />
+          </Suspense>
+        )
+      }
+    ]
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -33,17 +33,13 @@ nav ul {
   list-style-type: none;
 }
 
-.brand {
-  min-height: 30px;
-  margin-top: 0;
-}
-
 .App-main {
+  display: flex;
+  flex-direction: column;
   transition: all 0.5s ease;
   width: 100%;
   margin-left: var(--sidebar-closed-width);
   padding-left: 30px;
-  height: 100vh;
   background-color: var(--black);
 }
 
@@ -101,10 +97,4 @@ h1 {
 nav ul {
   margin: 0;
   padding: 0;
-}
-
-.dash {
-  display: flex;
-  align-items: center;
-  height: 100vh;
 }
