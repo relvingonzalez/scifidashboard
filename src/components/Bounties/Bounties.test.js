@@ -3,12 +3,12 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Bounties from './Bounties';
 
-describe('<Contacts />', () => {
+describe('<Bounties />', () => {
   test('it should mount', () => {
     render(<Bounties />);
 
-    const contacts = screen.getByTestId('Bounties');
+    const bounties = screen.getByTestId('Bounties');
 
-    expect(contacts).toBeInTheDocument();
+    expect(bounties).toBeInTheDocument();
   });
 });

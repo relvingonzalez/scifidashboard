@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 import Button from '../Button/Button';
 
 // data = { imgUrl, name, price, description }
-const ProductCard = ({ onZoom, onAddToCart, className, data }) => (
+const ProductCard = ({ onZoom, onAddToCart, className, data = {} }) => (
   <div className={`${styles.ProductCard} ${className}`}>
     <Card title={data.name} subtitle={data.price} data-testid="ProductCard">
       <div className={styles.Interior}>

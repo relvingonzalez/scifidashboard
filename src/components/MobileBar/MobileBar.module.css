@@ -1,0 +1,40 @@
+.MobileBar {
+    display: none;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: var(--mobile-bar-height);
+    width: 100%;
+    padding: 15px;
+    transition: all 0.5s ease;
+    background-color: var(--black);
+    border-top: 1px solid gray;
+    justify-content: center;;
+}
+
+.MobileBar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+.MobileBar>ul>li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 8px;
+}
+
+.MobileBar .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 640px) {
+    .MobileBar {
+        display: flex;
+    }
+}

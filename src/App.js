@@ -5,6 +5,7 @@ import { Box, Rocket, Store } from 'lucide-react';
 import MenuItem from './components/MenuItem/MenuItem';
 import { Outlet } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
+import MobileBar from './components/MobileBar/MobileBar';
 
 function App() {
   const [sideBarOpen, setSideBarOpen] = useState(true);
@@ -32,6 +33,20 @@ function App() {
       <main className={`App-main ${sideBarOpen && 'sidebar-open'}`}>
         <Outlet />
       </main>
+      <MobileBar isOpen={sideBarOpen}>
+        <MenuItem isActive={active === '/'} onClick={() => handleNavigate('home', '/')}>
+          <Rocket />
+          <span className="menu-text">Home</span>
+        </MenuItem>
+        <MenuItem isActive={active === '/bounties'} onClick={() => handleNavigate('bounties', '/bounties')}>
+          <Box />
+          <span className="menu-text">Bounties</span>
+        </MenuItem>
+        <MenuItem isActive={active === '/market'} onClick={() => handleNavigate('market', '/market')}>
+          <Store />
+          <span className="menu-text">Market</span>
+        </MenuItem>
+      </MobileBar>
     </div>
   );
 }

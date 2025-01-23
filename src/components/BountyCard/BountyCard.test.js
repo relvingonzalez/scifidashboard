@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ContactCard from './BountyCard';
+import BountyCard from './BountyCard';
 
-describe('<ContactCard />', () => {
+describe('<BountyCard />', () => {
   test('it should mount', () => {
-    render(<ContactCard />);
+    render(<BountyCard />);
 
-    const contactCard = screen.getByTestId('ContactCard');
+    const contactCard = screen.getByTestId('BountyCard');
 
     expect(contactCard).toBeInTheDocument();
   });

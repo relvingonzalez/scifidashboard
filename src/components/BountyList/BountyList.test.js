@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ContactList from './BountyList';
+import BountyList from './BountyList';
 
-describe('<ContactList />', () => {
+describe('<BountyList />', () => {
   test('it should mount', () => {
-    render(<ContactList />);
+    render(<BountyList />);
 
-    const contactList = screen.getByTestId('ContactList');
+    const bountyList = screen.getByTestId('BountyList');
 
-    expect(contactList).toBeInTheDocument();
+    expect(bountyList).toBeInTheDocument();
   });
 });

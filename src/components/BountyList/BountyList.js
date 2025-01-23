@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './BountyList.module.css';
 import BountyCard from '../BountyCard/BountyCard';
 
-const BountyList = ({ data, searchTerm = '' }) => {
+const BountyList = ({ data = [], searchTerm = '' }) => {
   return (
     <div className={styles.BountyList} data-testid="BountyList">
       {

@@ -9,12 +9,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: left;
     margin-bottom: 20px;
-}
-
-.toolBar > * {
-    min-width: 100px;
 }
 
 .toolBar h1 {
