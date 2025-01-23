@@ -27,7 +27,7 @@ const Products = () => {
       </div>
       <Modal className={styles.zoomedModal} isOpen={showModal} onClose={() => setShowModal(false)}>
         <h2>{zoomedProduct?.name}</h2>
-        <img styled={styles.zoomedProduct} src={zoomedProduct?.imgUrl} alt={zoomedProduct?.name} />
+        <img className={styles.zoomedProduct} src={zoomedProduct?.imgUrl} alt={zoomedProduct?.name} />
       </Modal>
     </>
   );
