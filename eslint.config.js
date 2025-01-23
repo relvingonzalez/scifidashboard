@@ -9,6 +9,12 @@ export default [
         },
         rules: {
             'react/prop-types': 'off'
+        },
+        parserOptions: {
+            "ecmaFeatures": {
+                "jsx": true
+            }
         }
-    }
+    },
+
 ];

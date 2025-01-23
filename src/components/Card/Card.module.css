@@ -1,9 +1,11 @@
 .Card {
     filter: drop-shadow(0 0 6px var(--purple))  drop-shadow(0 0 1px var(--purple)) brightness(1.5);
     width: 100%;
+    display: flex;
 }
 
 .CardInner {
+    flex: 1;
     background-color: var(--black);
     padding: 40px 30px;
     --aug-border-bg: linear-gradient(to bottom right,  var(--yellow), var(--purple));

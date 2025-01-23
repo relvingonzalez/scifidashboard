@@ -1,14 +1,29 @@
 .Button {
+    font-family: 'Orbitron';
+    background-color: var(--purple);
+    border-radius: 3px;
+    color: gray;
+    cursor: pointer;
+    box-shadow: none;
+    padding: 10px;
+    width: fit-content;
+    outline: none;
+}
+
+.Button.unstyled {
     background: none;
     border: 0;
     outline: none;
     text-decoration: none;
-    box-shadow: none;
-    border-radius: 5px;
-    color: gray;
-    cursor:pointer;
+    padding: 0;
 }
 
 .Button:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.Button.unstyled:hover {
+    background: none;
     color: var(--white);
 }

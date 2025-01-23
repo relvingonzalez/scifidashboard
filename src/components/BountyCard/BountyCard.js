@@ -14,7 +14,7 @@ const BountyCard = ({ className, data }) => (
             {data.location}
           </div>
           <div className={styles.bounty}>
-            <p>Bounty: <span>{ data.bounty }</span></p>
+            <p>Bounty: <span>{ data.bounty }</span> credits</p>
             <p className={styles.description}>{data.description}</p>
           </div> 
         </div>

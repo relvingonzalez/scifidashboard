@@ -27,7 +27,7 @@ function App() {
         <MenuItem isActive={active === '/'} onClick={() => handleNavigate('home', '/')}><Rocket /> {sideBarOpen && <p className="menu-text">Home</p>}</MenuItem>
         <MenuItem className="mt-20" isCategory>{sideBarOpen ? 'International' : 'Intl'}</MenuItem>
         <MenuItem isActive={active === '/bounties'} onClick={() => handleNavigate('bounties', '/bounties')}><Box /> {sideBarOpen && <p className="menu-text">Bounties</p>}</MenuItem>
-        <MenuItem isActive={active === '/shop'} onClick={() => handleNavigate('shop', '/shop')}><ShoppingCart /> {sideBarOpen && <p className="menu-text">Market</p>}</MenuItem>
+        <MenuItem isActive={active === '/market'} onClick={() => handleNavigate('market', '/market')}><ShoppingCart /> {sideBarOpen && <p className="menu-text">Market</p>}</MenuItem>
       </SideBar>
       <main className={`App-main ${sideBarOpen && 'sidebar-open'}`}>
         <Outlet />

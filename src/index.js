@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 // Use lazy to import components
 const Dashboard = lazy(() => import('./components/Dashboard/Dashboard'));
 const Bounties = lazy(() => import('./components/Bounties/Bounties'));
-const Shop = lazy(() => import('./components/Shop/Shop'));
+const Products = lazy(() => import('./components/Products/Products'));
 
 const router = createBrowserRouter([
   {
@@ -33,10 +33,10 @@ const router = createBrowserRouter([
         )
       },
       {
-        path: "shop",
+        path: "market",
         element: (
-          <Suspense fallback={<div>Loading About...</div>}>
-            <Shop />
+          <Suspense fallback={<div>Loading Products...</div>}>
+            <Products />
           </Suspense>
         )
       }

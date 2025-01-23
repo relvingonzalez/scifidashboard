@@ -1,1 +1,10 @@
-.ProductList {}
+.ProductList {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ProductList .ProductCard {
+    flex-basis: 20%;
+}
