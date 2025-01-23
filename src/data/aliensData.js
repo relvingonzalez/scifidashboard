@@ -83,3 +83,14 @@ export const alienProducts = [
         description: "For those cold, lonely nights. It's also bulletproof."
     }
 ];
+
+export const hitchhikersGuideExcerpt = 
+    `"Don't Panic."
+And the first entry under the letter 'A' in the Guide is:
+A
+"A is for Apple. But more importantly, A is for Astrometrics, which is a very useful subject if you're going to be traveling around the universe. Unfortunately, it's also incredibly dull, so we'll skip that and move on to something more interesting."
+However, the most well-known entry from the Guide relates to Earth:
+Earth
+"Harmless."
+But in later editions, this was amended to:
+"Mostly harmless."`;

@@ -26,3 +26,29 @@
     flex: 1;
     max-width: 400px;
 }
+
+.guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.guide .guideExcerptContainer {
+    width: 60%;
+}
+
+.guide .guideExcerpt {
+    margin-top: 20px;
+    padding: 60px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: gray; 
+}
+
+.guide .rough-annotation {
+    color: var(--purple);
+}

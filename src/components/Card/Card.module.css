@@ -4,7 +4,7 @@
     display: flex;
 }
 
-.CardInner {
+.cardInner {
     flex: 1;
     background-color: var(--black);
     padding: 40px 30px;

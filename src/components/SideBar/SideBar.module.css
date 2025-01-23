@@ -48,7 +48,8 @@
     background: var(--yellow);
     color: var(--black);
     padding: 2px 2px;
-    border-radius: 4px 0 0 4px;
+    border: none;
+    border-radius: 2px 0 0 2px;
 }
 
 .SideBar .toggle:hover {
