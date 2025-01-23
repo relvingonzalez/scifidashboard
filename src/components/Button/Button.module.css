@@ -2,7 +2,7 @@
     font-family: 'Orbitron';
     background-color: var(--purple);
     border-radius: 3px;
-    color: gray;
+    color: var(--white);
     cursor: pointer;
     box-shadow: none;
     padding: 10px;

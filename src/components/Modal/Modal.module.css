@@ -1,0 +1,27 @@
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    flex: 1;
+    background-color: var(--black);
+    padding: 40px 30px;
+    --aug-border-bg: linear-gradient(to bottom right,  var(--yellow), var(--purple));
+    --aug-tl: 40px;
+    --aug-tr: 30px;
+    --aug-br: 20px;
+    --aug-br-extend1: 25%;
+    --aug-br-extend2: 50%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
