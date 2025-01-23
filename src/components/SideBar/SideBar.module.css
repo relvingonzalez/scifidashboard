@@ -41,8 +41,21 @@
     margin-top: 3;
 }
 
-.Toggle {
+.SideBar .toggle {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 2px 2px;
+    border-radius: 4px 0 0 4px;
+}
+
+.SideBar .toggle:hover {
+    background-color: var(--yellow);
+    color: gray;
+}
+
+.toggle p {
+    margin: 0;
 }
