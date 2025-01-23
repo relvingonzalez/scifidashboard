@@ -19,7 +19,6 @@
 
 .InformationHeader {
     display: flex;
-    ;
     text-align: left;
     align-items: center;
     width: 90%;
@@ -91,7 +90,7 @@
 }
 
 .vitals .poor {
-    accent-color:var(--red);
+    accent-color: var(--red);
 }
 
 .credits {

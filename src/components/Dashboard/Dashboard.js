@@ -14,7 +14,7 @@ import Button from '../Button/Button';
 const Reports = () => (
   <>
     <div className={styles.featuredCharts}>
-      <GreetingCard name="Ray" />
+      <GreetingCard name="traveler" />
       <Card title="Battles" subtitle="Per Month">
         <LineChart datasets={lineDataSets} />
       </Card>
