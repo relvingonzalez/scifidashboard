@@ -33,3 +33,13 @@
     width: 100%;
     height: auto;
 }
+
+.shoppingCart {
+    position: relative;
+}
+
+.shoppingCart span {
+    position: absolute;
+    top: 0;
+    color: var(--yellow);
+}

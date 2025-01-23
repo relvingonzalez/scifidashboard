@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 import Button from '../Button/Button';
 
 // data = { imgUrl, name, price, description }
-const ProductCard = ({ onZoom, className, data }) => (
+const ProductCard = ({ onZoom, onAddToCart, className, data }) => (
   <div className={`${styles.ProductCard} ${className}`}>
     <Card title={data.name} subtitle={data.price} data-testid="ProductCard">
       <div className={styles.Interior}>
@@ -13,7 +13,7 @@ const ProductCard = ({ onZoom, className, data }) => (
           <div className={styles.descriptionContainer}>
             <p className={styles.description}>{data.description}</p>
           </div>
-          <Button onClick={() => alert('added')}>Add to Cart</Button>
+          <Button onClick={onAddToCart}>Add to Cart</Button>
         </div>
       </div>
     </Card>
