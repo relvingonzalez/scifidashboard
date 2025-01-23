@@ -23,13 +23,15 @@ const Products = () => {
       <div className={styles.Products} data-testid="Products">
         <div className={styles.toolBar}>
           <h1>Marketplace</h1>
-          <SearchInput searchTerm={searchTerm} onSearch={setSearchTerm} />
-          <div className={styles.shoppingCart}>
-            <ShoppingCart/>
-            <span>{ itemsInCart }</span>
+          <div className={styles.searchAndShoppingCart}>
+            <SearchInput searchTerm={searchTerm} onSearch={setSearchTerm} />
+            <div className={styles.shoppingCart}>
+              <ShoppingCart />
+              <span>{itemsInCart}</span>
+            </div>
           </div>
         </div>
-        <ProductList data={items} searchTerm={searchTerm} onZoomProduct={handleZoom} onAddToCart={()=> setItemsInCart(itemsInCart + 1)}/>
+        <ProductList data={items} searchTerm={searchTerm} onZoomProduct={handleZoom} onAddToCart={() => setItemsInCart(itemsInCart + 1)} />
       </div>
       <Modal className={styles.zoomedModal} isOpen={showModal} onClose={() => setShowModal(false)}>
         <h2>{zoomedProduct?.name}</h2>

@@ -1,9 +1,8 @@
 .SearchInput {
     position: relative;
-    height: 30px;
+    height: 35px;
     width: 100%;
     max-width: 250px;
-    flex: 1;
     margin-right: 20px;
 }
 
@@ -11,6 +10,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    padding: 0px 4px;
     outline: none;
     background: gray;
     border: 2px solid var(--purple);
