@@ -11,7 +11,8 @@ const Modal = ({ children, isOpen, onClose, className }) => {
 
   return (
     isOpen && (
-      <div className={styles.overlay} onClick={onClose}>
+      <>
+        <div className={styles.overlay} onClick={onClose} />
         <div className={`${styles.Modal} ${className}`} onClick={handleClose} data-augmented-ui="tl-clip br-2-clip-xy tr-round border">
           <div className={styles.modalHeader}>
             <Button onClick={onClose}>Close</Button>
@@ -20,7 +21,7 @@ const Modal = ({ children, isOpen, onClose, className }) => {
             {children}
           </div>
         </div>
-      </div >
+      </>
     )
   );
 };
