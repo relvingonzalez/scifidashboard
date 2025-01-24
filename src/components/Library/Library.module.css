@@ -1,0 +1,18 @@
+.Library {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    padding: 20px;
+    height: 100%;
+}
+
+.Library h1 {
+    align-self: self-start;
+}
+
+.bookshelfContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}

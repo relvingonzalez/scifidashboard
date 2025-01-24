@@ -13,7 +13,7 @@ const Bounties = () => {
     <div className={styles.Bounties} data-testid="Bounties">
       <div className={styles.toolBar}>
         <h1>Bounties</h1>
-        <SearchInput searchTerm={searchTerm} onSearch={setSearchTerm} />
+          <SearchInput searchTerm={searchTerm} onSearch={setSearchTerm} />
       </div>
       <BountyList data={items} searchTerm={searchTerm} />
     </div>

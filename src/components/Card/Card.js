@@ -9,7 +9,6 @@ const Card = ({ children, title, subtitle, className, classNameInner }) => (
       {children}
     </div>
   </div>
-
 );
 
 Card.propTypes = {};

@@ -15,7 +15,8 @@
     --aug-br-extend2: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
+    flex-direction: column;
 }
 
 .overlay {
@@ -30,8 +31,14 @@
 }
 
 .modalContent {
-    display: flex;
+    display: flex
+;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.modalHeader {
+
 }

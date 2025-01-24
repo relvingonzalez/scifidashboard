@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Library from 'components/Library/Library';
 
 // Use lazy to import components
 const Dashboard = lazy(() => import('./components/Dashboard/Dashboard'));
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading Products...</div>}>
             <Products />
+          </Suspense>
+        )
+      },
+      {
+        path: "library",
+        element: (
+          <Suspense fallback={<div>Loading Library...</div>}>
+            <Library />
           </Suspense>
         )
       }
